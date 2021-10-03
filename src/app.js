@@ -1,11 +1,12 @@
 const express = require("express")
 const logger = require("morgan")
+const path = require("path")
 
 const app = express()
 
 module.exports = app
 app.use(logger("tiny"))
 app.get("/", (req, res) => {
-    res.send("Hello world")
+    res.sendFile(path.join(__dirname, "views", "index.html"))
 })
 
