@@ -20,11 +20,5 @@ app.get("/app.js", (req, res) => {
 
 app.listen(port, () => console.log(`The server is listening on port ${color.green(port)}`))
 
-// elements.elementSearchButton.addEventListener('click', searchWeather)
-//
-// const searchWeather = () => {
-//     alert('clicked')
-// }
-//
-// export {app}
+
 
