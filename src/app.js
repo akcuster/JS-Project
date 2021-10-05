@@ -26,5 +26,13 @@ const searchWeather = () => {
         .catch(error => alert(error))
 }
 
+const updateWeather = weatherData => {
+    elementWeatherCityName.textContent = weatherData.cityName
+    elementWeatherDescription.textContent = weatherData.description
+    elementWeatherTemperature.textContent = weatherData.temperature
+
+    elementWeatherBox.style.display = 'block'
+}
+
 elementSearchButton.addEventListener('click', searchWeather)
 
