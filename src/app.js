@@ -7,8 +7,9 @@ import { elementSearchButton,
     elementWeatherDescription
 } from './elements.js'
 
-elementSearchButton.addEventListener('click', searchWeather)
-
 const searchWeather = () => {
     alert('clicked')
 }
+
+elementSearchButton.addEventListener('click', searchWeather)
+
