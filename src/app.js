@@ -7,6 +7,7 @@ import { elementSearchButton,
     elementWeatherDescription
 } from './elements.js'
 import { Http } from './Http.js'
+import {WeatherData, weatherProxyHandler} from "./WeatherData.js";
 
 const appID = ''
 const searchWeather = () => {
@@ -18,7 +19,9 @@ const searchWeather = () => {
 
     Http.fetchData(url)
         .then(responseData => {
-
+            const weatherData = new WeatherData(cityName, responseData.weather[0].description.toUpperCase())
+            const weatherProxy = new Proxy(weatherData, weatherProxyHandler)
+            weatherProxy.temperature = responseData.main.temp
         })
         .catch(error => alert(error))
 }
