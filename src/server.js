@@ -15,9 +15,6 @@ app.use(express.static(__dirname))
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "index.html"))
 })
-// app.get("/app.js", (req, res) => {
-//     res.sendFile(path.join(__dirname, "app.js"))
-// })
 
 app.listen(port, () => console.log(`The server is listening on port ${color.green(port)}`))
 
