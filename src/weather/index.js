@@ -13,3 +13,19 @@ const fetchWeather = async (cityName) => {
         return {Error: err.stack}
     }
 }
+
+router.get("/", (req, res) => {
+    res.json({ success: "Hello Weather!"})
+})
+
+router.get("/:cityName", async (req, res) => {
+    const cityName = req.params.cityName
+    const data = await fetchWeather(cityName)
+    res.json(data)
+})
+
+router.post("/", async (req, res) => {
+    const cityName = req.body.cityName
+    const data = await fetchWeather(cityName)
+    res.json(data)
+})
