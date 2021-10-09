@@ -8,7 +8,7 @@ import { elementSearchButton,
 } from './elements.js'
 import { Http } from './Http.js'
 import {WeatherData, weatherProxyHandler} from "./WeatherData.js";
-import { apiKey } from './resources/properties.js'
+
 
 const searchWeather = () => {
     const cityName = elementSearchedCity.value.trim()
