@@ -29,3 +29,5 @@ router.post("/", async (req, res) => {
     const data = await fetchWeather(cityName)
     res.json(data)
 })
+
+export default router
