@@ -17,7 +17,7 @@ const searchWeather = () => {
     }
     elementLoadingText.style.display = 'block'
     elementWeatherBox.style.display = 'none'
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`
+    const url = `./weather/${cityName}`
 
     Http.fetchData(url)
         .then(responseData => {
